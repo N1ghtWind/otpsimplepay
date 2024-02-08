@@ -1,5 +1,5 @@
 {
-    "name": "taki47/otpsimplepay",
+    "name": "n1ghtWind/otpsimplepay",
     "description": "simplepay for laravel",
     "type": "package",
     "license": "MIT",
@@ -13,7 +13,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Taki47\\Otpsimplepay\\": "src/"
+            "N1ghtWind\\Otpsimplepay\\": "src/"
         }
     }
 }

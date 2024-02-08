@@ -1,6 +1,6 @@
 <?php
 
-namespace Taki47\Otpsimplepay;
+namespace N1ghtWind\Otpsimplepay;
 
 use Exception;
 

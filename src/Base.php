@@ -1,6 +1,6 @@
 <?php
 
-namespace Taki47\Otpsimplepay;
+namespace N1ghtWind\Otpsimplepay;
 use Exception;
 
 class Base {
@@ -49,9 +49,11 @@ class Base {
 
         $this->logChannel = getEnv("OTP_PAYMENT_LOG_CHANNEL") ? getEnv("OTP_PAYMENT_LOG_CHANNEL") : "daily";
         $this->phpVersion = (int)phpversion();
-        
+
         $this->config["HUF_MERCHANT"]   = getEnv("OTP_PAYMENT_HUF_MERCHANT");
         $this->config["HUF_SECRET_KEY"] = getEnv("OTP_PAYMENT_HUF_SECRET_KEY");
+        $this->config["EUR_MERCHANT"]   = getEnv("OTP_PAYMENT_EUR_MERCHANT");
+        $this->config["EUR_SECRET_KEY"] = getEnv("OTP_PAYMENT_EUR_SECRET_KEY");
         $this->config["SANDBOX"]        = getEnv("OTP_PAYMENT_SANDBOX");
         $this->config["LOG"]            = getEnv("OTP_PAYMENT_LOG");
 
@@ -199,6 +201,7 @@ class Base {
         //array
         if (is_array($data)) {
             $json =  json_encode($data);
+            $data = $json;
         }
         //object
         if (is_object($data)) {
